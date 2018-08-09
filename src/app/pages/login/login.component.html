@@ -1,3 +1,38 @@
-<p>
-  login works!
-</p>
+<div class="row">
+  <div class="col-md-6 mx-auto mt-5">
+    <div class="card">
+      <div class="card-header">
+        <h1 class="text-center">Iniciar Sesión</h1>
+      </div>
+      <div class="card-body">
+        <!-- boton para resgristrar nuevo usuario -->
+        <div class="my-3">
+            <button type="button" class="btn btn-success btn-lg btn-block" (click)="onNewUser()"><i class="fa fa-arrow-circle-right"></i> Crear Cuenta <i class="fa fa-arrow-circle-left"></i></button>
+        </div>
+        <!-- formulario de inicio de sesion -->
+        <div class="container mb-3">
+            <form>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Ingresa tu Email">
+                  <small id="emailHelp" class="form-text text-muted">Ingresa tu Email para crear tu usuario </small>
+                </div>
+                <div class="form-group">
+                  <label for="password">Contraseña</label>
+                  <input type="password" class="form-control" id="password" name="password" placeholder="Ingresa tu contraseña">
+                </div>
+                <input class="btn btn-block btn-primary btn-lg" type="text" value="Iniciar Sesión">
+              </form>
+        </div>
+            <!-- iniciar sesion con redes -->
+          <div>
+            <h5 class="text-center">Ingresa con tu ceunta de Google o Facebook</h5>
+            <button type="button" class="btn btn-primary btn-lg btn-block" (click)="onClickFacebookLogin()"><i class="fa fa-facebook"></i> Facebook</button> 
+            <button type="button" class="btn btn-danger btn-lg btn-block" (click)="onClickGoogleLogin()"><i class="fab fa-google"></i> Google</button>
+            <button type="button" class="btn btn-info btn-lg btn-block" (click)="onClickTwitterLogin()"><i class="fab fa-twitter"></i> Twitter</button>
+          </div>
+
+      </div>
+    </div>
+  </div>
+</div>
