@@ -14,12 +14,10 @@ import { NoFoundComponent } from './pages/no-found/no-found.component';
 import { AngularFireModule } from '../../node_modules/angularfire2';
 import { AngularFireAuthModule } from '../../node_modules/angularfire2/auth';
 
-// import { AngularFireModule } from 'angularFire2';
-// import { AngularFireAuthModule } from 'angularFire2/auth';
-
 import { environment } from '../environments/environment';
 
 import {AuthService} from './service/auth.service';
+import {AuthGuard} from './guards/auth.guard';
 
 @NgModule({
   declarations: [
@@ -38,7 +36,7 @@ import {AuthService} from './service/auth.service';
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
-  providers: [AuthService],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
